@@ -30,9 +30,14 @@ namespace Formulario_Tomas
         //*******************************************************************************
         private void Btn_Prueba_Click(object sender, EventArgs e)
         {
+            DateTime Dtime_Hora = DateTime.Now;
+
             try
             {
-                Actualizar_Informacion();
+                if (Dtime_Hora.Hour >= 8 && Dtime_Hora.Hour <= 17)
+                {
+                    Actualizar_Informacion();
+                }
 
                 MessageBox.Show("Proceso exitos", "Mensaje", MessageBoxButtons.OK);
             }

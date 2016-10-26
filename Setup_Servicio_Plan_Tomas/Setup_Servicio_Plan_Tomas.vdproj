@@ -15,38 +15,14 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_023EA25F63634249B30A434AED6C8637"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_474E19773CE54A46A3E35A14E8F38514"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8E44DF1ECA134017942310F541B4CA3C"
+        "MsmKey" = "8:_67A9225166C24926BF276D764A856490"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8E44DF1ECA134017942310F541B4CA3C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_474E19773CE54A46A3E35A14E8F38514"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_023EA25F63634249B30A434AED6C8637"
+        "OwnerKey" = "8:_67A9225166C24926BF276D764A856490"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -81,11 +57,6 @@
                     "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 y x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
                     }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
-                    {
-                    "Name" = "8:.NET Framework 3.5 SP1"
-                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
-                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
                     {
                     "Name" = "8:Windows Installer 3.1"
@@ -109,65 +80,73 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_132785E3B0834404AF67FA2F3980C674"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_23C727B9187044E594DDB37E445BBCAE"
             {
             "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
             "Condition" = "8:"
-            "Object" = "8:_8E44DF1ECA134017942310F541B4CA3C"
-            "FileType" = "3:2"
-            "InstallAction" = "3:4"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_40454C8D_9ECF_47ED_A5C9_C1D78A4874CE"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_22A26949EE41457693D63F3C661C00B7"
-            {
-            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
-            "Condition" = "8:"
-            "Object" = "8:_8E44DF1ECA134017942310F541B4CA3C"
-            "FileType" = "3:2"
-            "InstallAction" = "3:1"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_BBD4CF4C_6E78_4F55_8815_3C469C7B71D6"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8704DB468130419398F03CD366976E8C"
-            {
-            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
-            "Condition" = "8:"
-            "Object" = "8:_8E44DF1ECA134017942310F541B4CA3C"
-            "FileType" = "3:2"
-            "InstallAction" = "3:2"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_ABD83F3B_91E2_4A41_82BE_485975F104AF"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_9CCB9962B9654AB78B9795517F3F2194"
-            {
-            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
-            "Condition" = "8:"
-            "Object" = "8:_8E44DF1ECA134017942310F541B4CA3C"
+            "Object" = "8:_67A9225166C24926BF276D764A856490"
             "FileType" = "3:2"
             "InstallAction" = "3:3"
             "Arguments" = "8:"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_D74AF590_3900_48CB_8C86_76ABCB6385C9"
+            "Identifier" = "8:_F69F1AE7_DFB9_4101_9A50_63DC3D40E0EF"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_5123EFBDEA924C02975F7B4BEDF79552"
+            {
+            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
+            "Condition" = "8:"
+            "Object" = "8:_67A9225166C24926BF276D764A856490"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_27AE25E2_2FF7_4937_892E_55007E8950A8"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_51C426F8F7BC4CA0AA91621B21DA0102"
+            {
+            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
+            "Condition" = "8:"
+            "Object" = "8:_67A9225166C24926BF276D764A856490"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_D67B29A1_D46D_4F49_8B06_D3851C176359"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_5E1C55FE7DDD43F68433B7431A210DF4"
+            {
+            "Name" = "8:Resultado principal de Servicio_Win_Tomas (Activo)"
+            "Condition" = "8:"
+            "Object" = "8:_67A9225166C24926BF276D764A856490"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_AA6F92A1_9342_427B_8C81_7AA94381AF1D"
             "InstallerClass" = "11:TRUE"
             "CustomActionData" = "8:"
             }
@@ -251,7 +230,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup_Servicio_Plan_Tomas"
         "ProductCode" = "8:{94289996-008C-42FA-AEC1-7D251855014A}"
-        "PackageCode" = "8:{803FE699-6F9E-48F9-BAA1-89CFCA7F4102}"
+        "PackageCode" = "8:{6456449E-4BB9-40B6-A9D9-AE35AF206413}"
         "UpgradeCode" = "8:{A7893ACC-D323-4568-901B-529F0FCE70DB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -770,63 +749,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_023EA25F63634249B30A434AED6C8637"
-            {
-            "SourcePath" = "8:..\\Servicio_Win_Tomas\\obj\\Debug\\Servicio_Win_Tomas.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_434EE7E3C6D94C4680E9DE28CAA95EF5"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{8EC697CA-BFFF-42A9-B517-6CD2ADA3A9F9}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_474E19773CE54A46A3E35A14E8F38514"
-            {
-            "SourcePath" = "8:..\\Servicio_Win_Tomas\\obj\\Debug\\Servicio_Win_Tomas.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_6151CD4581BB473DBF862045270A4E38"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            "ProjectOutputGroupRegister" = "3:1"
-            "OutputConfiguration" = "8:"
-            "OutputGroupCanonicalName" = "8:Built"
-            "OutputProjectGuid" = "8:{8EC697CA-BFFF-42A9-B517-6CD2ADA3A9F9}"
-            "ShowKeyOutput" = "11:TRUE"
-                "ExcludeFilters"
-                {
-                }
-            }
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8E44DF1ECA134017942310F541B4CA3C"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_67A9225166C24926BF276D764A856490"
             {
             "SourcePath" = "8:..\\Servicio_Win_Tomas\\obj\\Debug\\Servicio_Win_Tomas.exe"
             "TargetName" = "8:"

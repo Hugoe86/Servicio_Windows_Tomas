@@ -17,10 +17,23 @@ namespace Servicio_Win_Tomas
     {
         public Timer Tiempo;
 
-
+        /////*******************************************************************************************************
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <returns></returns>
+        ///// <creo>Hugo Enrique Ramírez Aguilera</creo>
+        ///// <fecha_creo>1</fecha_creo>
+        ///// <modifico></modifico>
+        ///// <fecha_modifico></fecha_modifico>
+        ///// <causa_modificacion></causa_modificacion>
+        ///*******************************************************************************************************
         public Service1()
         {
             InitializeComponent();
+            Tiempo = new Timer();
+            Tiempo.Interval = 900000; // 900000 = 15 minutos     // 600000 = 10 minutos  //  1200000 = 20 minutos
+            Tiempo.Elapsed += new ElapsedEventHandler(Tiempo_Contador);
         }
 
         /////*******************************************************************************************************
@@ -36,9 +49,7 @@ namespace Servicio_Win_Tomas
         ///*******************************************************************************************************
         protected override void OnStart(string[] args)
         {
-            Tiempo = new Timer();
-            Tiempo.Interval = 300000; // 30000 = 30 seg     // 600000 = 10 minutos  //  1200000 = 20 minutos
-            Tiempo.Elapsed += new ElapsedEventHandler(Tiempo_Contador);
+            Tiempo.Enabled = true;
         }
 
         /////*******************************************************************************************************
@@ -72,12 +83,26 @@ namespace Servicio_Win_Tomas
         ///*******************************************************************************************************
         public void Tiempo_Contador(object Sender, EventArgs e)
         {
-
+            //StreamWriter SW = new StreamWriter("C:\\Servicios_siac\\Historial.txt", true);
             DateTime Dtime_Hora = DateTime.Now;
 
-            if (Dtime_Hora.Hour >= 10 && Dtime_Hora.Hour <= 17)
+            try
             {
-                Actualizar_Informacion();   
+                //SW.WriteLine("************************************************************");
+               
+                if (Dtime_Hora.Hour >= 18 && Dtime_Hora.Hour <= 19)
+                {
+                    //SW.WriteLine("************************************************************");
+                    Actualizar_Informacion();
+                }
+            }
+            catch (Exception Ex)
+            {
+
+            }
+            finally
+            {
+                //SW.Close();
             }
 
         }// fin
@@ -110,11 +135,11 @@ namespace Servicio_Win_Tomas
             Int32 Int_Mes = 0;
             String Str_Nombre_Mes = "";
             Dictionary<Int32, String> Dic_Meses;
-            StreamWriter SW = new StreamWriter("C:\\Servicios_siac\\Historial.txt", true);
+            //StreamWriter SW = new StreamWriter("C:\\Servicios_siac\\Historial.txt", true);
 
             try
             {
-                SW.WriteLine("************************************************************");
+                //SW.WriteLine("************************************************************");
                
                 Dic_Meses = Cls_Metodos_Generales.Crear_Diccionario_Meses();
                 Rs_Consulta.P_Anio = DateTime.Now.Year;
@@ -126,7 +151,7 @@ namespace Servicio_Win_Tomas
                 Dt_Reporte_MicroMedidor = Crear_Tabla_Reporte();
                 Dt_Reporte_Descarga = Crear_Tabla_Reporte();
 
-                SW.WriteLine("1___ " + DateTime.Now.ToString());
+                //SW.WriteLine("1___ " + DateTime.Now.ToString());
 
 
                 //********************************************************************************************************************
@@ -160,8 +185,8 @@ namespace Servicio_Win_Tomas
                 //   se consultan las tomas que se realizaron en el año de consulta
                 Dt_Consulta = Rs_Consulta.Consultar_Tomas_Realizadas();
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("2___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("2___ " + DateTime.Now.ToString());
 
 
                 //  se recorre la tabla del reporte final
@@ -202,8 +227,8 @@ namespace Servicio_Win_Tomas
                 }// fin foreach reporte
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("3___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("3___ " + DateTime.Now.ToString());
 
                 //********************************************************************************************************************
                 //********************************************************************************************************************
@@ -263,8 +288,8 @@ namespace Servicio_Win_Tomas
 
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("4___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("4___ " + DateTime.Now.ToString());
 
 
                 //********************************************************************************************************************
@@ -324,8 +349,8 @@ namespace Servicio_Win_Tomas
 
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("5___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("5___ " + DateTime.Now.ToString());
 
 
                 //********************************************************************************************************************
@@ -408,8 +433,8 @@ namespace Servicio_Win_Tomas
                 }
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("6___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("6___ " + DateTime.Now.ToString());
 
 
                 //******************************************************************************************************************
@@ -446,8 +471,8 @@ namespace Servicio_Win_Tomas
                 }
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("7___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("7___ " + DateTime.Now.ToString());
 
 
                 //******************************************************************************************************************
@@ -483,8 +508,8 @@ namespace Servicio_Win_Tomas
                 }
 
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("8___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("8___ " + DateTime.Now.ToString());
 
                 //******************************************************************************************************************
                 //******************************************************************************************************************
@@ -518,18 +543,18 @@ namespace Servicio_Win_Tomas
                     }// fin el else
                 }
 
-                SW.WriteLine("************************************************************");
-                SW.WriteLine("9___ " + DateTime.Now.ToString());
+                //SW.WriteLine("************************************************************");
+                //SW.WriteLine("9___ " + DateTime.Now.ToString());
 
 
             }
             catch (Exception Ex)
             {
-                SW.WriteLine("Error: " + Ex.Message);
+                //SW.WriteLine("Error: " + Ex.Message);
             }
             finally
             {
-                SW.Close();
+                //SW.Close();
             }
         }// fin del metodo
 

@@ -33,13 +33,14 @@
             // 
             // serviceProcessInstaller1
             // 
-            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
+            this.serviceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.serviceProcessInstaller1.Password = null;
             this.serviceProcessInstaller1.Username = null;
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.Description = "Servicio que genera la información del reporte de planeación de tomas";
+            this.serviceInstaller1.Description = "Servicio que genera la información del reporte de planeación de tomas en el horar" +
+    "io de 06:00 pm - 07:00 pm";
             this.serviceInstaller1.DisplayName = "Servicio Plan Tomas ******************************************";
             this.serviceInstaller1.ServiceName = "Servicio_Tomas";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;

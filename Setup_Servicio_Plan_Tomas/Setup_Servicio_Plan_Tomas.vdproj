@@ -87,6 +87,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -228,9 +241,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup_Servicio_Plan_Tomas"
+        "ProductName" = "8:Setup_Servicio_Planeacion_Tomas"
         "ProductCode" = "8:{94289996-008C-42FA-AEC1-7D251855014A}"
-        "PackageCode" = "8:{6456449E-4BB9-40B6-A9D9-AE35AF206413}"
+        "PackageCode" = "8:{C792F58A-B7A0-44B0-A3A6-26CBEACAC47A}"
         "UpgradeCode" = "8:{A7893ACC-D323-4568-901B-529F0FCE70DB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -238,12 +251,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Nombre predeterminado de la compañía"
+        "Manufacturer" = "8:Contel"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup_Servicio_Plan_Tomas"
+        "Title" = "8:Setup_Servicio_Planeacion_Tomas"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Nombre predeterminado de la compañía"
+        "ARPCONTACT" = "8:Contel"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

@@ -7,6 +7,7 @@ using SIAC.Constantes;
 using SharpContent.ApplicationBlocks.Data;
 using Reportes_Planeacion.Tomas.Negocio;
 using System.Data.SqlClient;
+using System.Globalization;
 
 
 /// <summary>
@@ -475,8 +476,8 @@ namespace Reportes_Planeacion.Tomas.Datos
                 Mi_SQL += "(";
                 Mi_SQL += "  '" + Datos.P_Giro_Id + "'";                                            //  1
                 Mi_SQL += ", '" + Datos.P_Dr_Registro["Tomas_Por_Tarifa"].ToString() + "'";                 //  2
-                Mi_SQL += ",  " + Datos.P_Anio + "";                                                //  3
-                Mi_SQL += ",  " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString() + "";      //  4
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Anio).ToString(new CultureInfo("es-MX")) + "";                                                //  3
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX")) + "";      //  4
                 Mi_SQL += ",  getdate()";                                                           //  5
                 Mi_SQL += ", '" + Datos.P_Str_Usuario + "'";                                        //  7
                 Mi_SQL += ")";
@@ -549,7 +550,7 @@ namespace Reportes_Planeacion.Tomas.Datos
 
 
                 Mi_SQL = "update  Ope_Cor_Plan_Tomas_Agua set ";
-                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString();
+                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX"));
                 Mi_SQL += ", fecha_modifico = getdate()";
                 Mi_SQL += ", usuario_modifico = '" + Datos.P_Str_Usuario + "'";
                 Mi_SQL += " where id = '" + Datos.P_Id + "'";
@@ -730,8 +731,8 @@ namespace Reportes_Planeacion.Tomas.Datos
                 Mi_SQL += "(";
                 Mi_SQL += "  '" + Datos.P_Giro_Id + "'";                                            //  1
                 Mi_SQL += ", '" + Datos.P_Dr_Registro["Tomas_Por_Tarifa"].ToString() + "'";                 //  2
-                Mi_SQL += ",  " + Datos.P_Anio + "";                                                //  3
-                Mi_SQL += ",  " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString() + "";      //  4
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Anio).ToString(new CultureInfo("es-MX")) + "";                                                //  3
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX")) + "";      //  4
                 Mi_SQL += ",  getdate()";                                                           //  5
                 Mi_SQL += ", '" + Datos.P_Str_Usuario + "'";                                        //  7
                 Mi_SQL += ")";
@@ -804,7 +805,7 @@ namespace Reportes_Planeacion.Tomas.Datos
 
 
                 Mi_SQL = "update  Ope_Cor_Plan_Tomas_Micromedidor set ";
-                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString();
+                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX"));
                 Mi_SQL += ", fecha_modifico = getdate()";
                 Mi_SQL += ", usuario_modifico = '" + Datos.P_Str_Usuario + "'";
                 Mi_SQL += " where id = '" + Datos.P_Id + "'";
@@ -987,8 +988,8 @@ namespace Reportes_Planeacion.Tomas.Datos
                 Mi_SQL += "(";
                 Mi_SQL += "  '" + Datos.P_Giro_Id + "'";                                            //  1
                 Mi_SQL += ", '" + Datos.P_Dr_Registro["Tomas_Por_Tarifa"].ToString() + "'";                 //  2
-                Mi_SQL += ",  " + Datos.P_Anio + "";                                                //  3
-                Mi_SQL += ",  " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString() + "";      //  4
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Anio).ToString(new CultureInfo("es-MX")) + "";                                                //  3
+                Mi_SQL += ",  " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX")) + "";      //  4
                 Mi_SQL += ",  getdate()";                                                           //  5
                 Mi_SQL += ", '" + Datos.P_Str_Usuario + "'";                                        //  7
                 Mi_SQL += ")";
@@ -1061,7 +1062,8 @@ namespace Reportes_Planeacion.Tomas.Datos
 
 
                 Mi_SQL = "update  Ope_Cor_Plan_Tomas_Descargas set ";
-                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString();
+                Mi_SQL += "  " + Datos.P_Str_Nombre_Mes + " = " + Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX"));
+                //Convert.ToDouble(Datos.P_Dr_Registro[Datos.P_Str_Nombre_Mes].ToString()).ToString(new CultureInfo("es-MX")) 
                 Mi_SQL += ", fecha_modifico = getdate()";
                 Mi_SQL += ", usuario_modifico = '" + Datos.P_Str_Usuario + "'";
                 Mi_SQL += " where id = '" + Datos.P_Id + "'";

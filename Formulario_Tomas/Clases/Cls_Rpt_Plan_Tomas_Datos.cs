@@ -179,6 +179,7 @@ namespace Reportes_Planeacion.Tomas.Datos
                 Str_My_Sql += " JOIN Cat_Cor_Giros_Actividades ga ON ga.Actividad_Giro_ID = p.Giro_Actividad_ID";
                 Str_My_Sql += " JOIN Cat_Cor_Giros g ON g.GIRO_ID = ga.Giro_ID";
                 Str_My_Sql += " join Cat_Cor_Predios_Medidores pm on pm.PREDIO_ID = p.Predio_ID";
+                Str_My_Sql += " join Cat_Cor_Medidores cm on cm.MEDIDOR_ID = pm.MEDIDOR_ID and cm.ESTATUS = 'ACTIVO'";
 
 
                 //  ****************************************************************************************************************************************
